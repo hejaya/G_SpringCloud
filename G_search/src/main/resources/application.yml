@@ -1,0 +1,12 @@
+server:
+  port: 8009
+spring:
+  application:
+    name: g-search
+  devtools:
+    restart:
+      enabled: false
+  data:
+    solr:
+      host: http://localhost:8088/solr/collection1
+

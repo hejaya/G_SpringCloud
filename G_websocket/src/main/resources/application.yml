@@ -1,0 +1,10 @@
+server:
+  port: 8008
+spring:
+  application:
+    name: g-webs
+  devtools:
+    restart:
+      enabled: false
+  rabbitmq:
+    host: 47.100.237.50

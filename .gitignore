@@ -1,0 +1,8 @@
+# Project exclude paths
+/G_common/target/
+/G_dep/target/
+/G_user/target/
+# Project exclude paths
+/G_eureka/target/
+/G_gateway/target/
+/G_websocket/target/

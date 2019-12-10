@@ -1,0 +1,22 @@
+server:
+  port: 8005
+spring:
+  application:
+    name: g-config
+  devtools:
+    restart:
+      enabled: false
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://47.100.237.50:3000/guan/gts.git
+          search-paths: gts
+          username: guan
+          password: 123456
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8001/eureka
+  instance:
+    prefer‐ip‐address: true

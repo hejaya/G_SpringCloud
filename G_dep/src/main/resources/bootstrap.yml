@@ -1,0 +1,13 @@
+spring:
+ cloud:
+   config:
+     profile: dev
+     uri: http://localhost:8005/
+     label: master
+     name: g_config
+management:
+  endpoints: #带s
+    enabled-by-default: true
+    web:
+      exposure:
+        include: "*"

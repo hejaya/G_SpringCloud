@@ -1,0 +1,22 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: g-gateway
+  devtools:
+    restart:
+      enabled: false
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8001/eureka
+  instance:
+    prefer‐ip‐address: true
+zuul:
+  routes:
+    g-dep:
+      path: /dep/** #配置请求URL的请求规则
+      serviceId: g-dep #指定Eureka注册中心中的服务id
+    g-user:
+      path: /user/** #配置请求URL的请求规则
+      serviceId: g-user #指定Eureka注册中心中的服务id

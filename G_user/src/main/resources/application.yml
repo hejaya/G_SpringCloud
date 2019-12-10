@@ -1,0 +1,31 @@
+server:
+  port: 8003
+spring:
+  application:
+    name: g-user
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 971126
+    url: jdbc:mysql://47.100.237.50:3306/gsc
+  devtools:
+    restart:
+      enabled: false
+  redis:
+    host: 47.100.237.50
+  rabbitmq:
+    host: 47.100.237.50
+  thymeleaf:
+    cache: false
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8001/eureka
+  instance:
+    prefer‐ip‐address: true
+feign:
+  hystrix:
+    enabled: true #熔断
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

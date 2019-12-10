@@ -1,0 +1,28 @@
+server:
+  port: 8004
+spring:
+  application:
+    name: g-dep
+  jpa:
+    show-sql: true
+    database: MySQL
+  devtools:
+    restart:
+      enabled: false
+  jackson:
+    time-zone: GMT+8
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 971126
+    url: jdbc:mysql://47.100.237.50:3306/gsc
+  data:
+    mongodb:
+      host: 47.100.237.50
+      database: gts
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8001/eureka
+  instance:
+    prefer‐ip‐address: true

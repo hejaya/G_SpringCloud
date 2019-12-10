@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sc.dep.dao.MenuMapper">
+  <resultMap id="BaseResultMap" type="menu">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="pid" jdbcType="INTEGER" property="pid" />
+    <collection property="menus" fetchType="eager" ofType="menu" select="selectAllByPid" column="id"/>
+  </resultMap>
+
+  <select id="selectAllByPid" resultMap="BaseResultMap">
+    SELECT * FROM `menu` WHERE pid = #{pid}
+  </select>
+</mapper>
