@@ -25,7 +25,6 @@ public class DepController {
     @Autowired
     private DepService depService;
 
-
     @Value("${guan}")
     private String testString;
 

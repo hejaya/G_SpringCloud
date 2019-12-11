@@ -23,10 +23,5 @@ public class Dep implements Serializable {
     private String id;
     private String name;
     private String address;
-
-    @OneToOne(cascade = CascadeType.PERSIST,fetch = FetchType.LAZY)
-    @JoinColumn(name="uid")
-    private User user;
-
     //private Integer uid;
 }

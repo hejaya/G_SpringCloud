@@ -26,3 +26,5 @@ eureka:
       defaultZone: http://127.0.0.1:8001/eureka
   instance:
     prefer‐ip‐address: true
+mybatis-plus:
+  mapper-locations: classpath:com/sc/dep/pojo/*

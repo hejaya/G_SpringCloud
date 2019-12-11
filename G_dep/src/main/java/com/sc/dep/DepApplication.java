@@ -1,9 +1,9 @@
 package com.sc.dep;
 
 import com.sc.common.utils.IdWorker;
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
 
 /**
@@ -11,9 +11,10 @@ import org.springframework.context.annotation.Bean;
  * @Mood: Pumped Up
  * @Date: 2019/7/29 15:52
  **/
-//@EnableEurekaClient
+
+@EnableEurekaClient
 @SpringBootApplication
-@MapperScan(value = "com.sc.dep.dao")
+//@MapperScan(value = "com.sc.dep.dao")
 public class DepApplication {
 
     public static void main(String[] args) {

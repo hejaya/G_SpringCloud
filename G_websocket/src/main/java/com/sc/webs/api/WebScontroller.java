@@ -28,7 +28,7 @@ public class WebScontroller {
     public void senMsg() {
         for(int i =1;i<=5;i++) {
             //广播使用convertAndSend方法，第一个参数为目的地，和js中订阅的目的地要一致
-            template.convertAndSend("/topic/getResponse", "曹尼玛"+i);
+            template.convertAndSend("/topic/getResponse", "哈哈哈"+i);
         }
     }
 
