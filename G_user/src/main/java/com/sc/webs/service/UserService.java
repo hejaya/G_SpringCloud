@@ -13,8 +13,6 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.concurrent.TimeUnit;
-
 /**
  * @Author: G_three
  * @Mood: Pumped Up
@@ -42,8 +40,19 @@ public class UserService {
     }
 
     public ResponseResult getAllUsers() {
-        stringRedisTemplate.opsForValue().set("15236984568","824367",5, TimeUnit.MINUTES);
-        rabbitTemplate.convertAndSend("gts","15269895632");
+
+        User user = new User();
+        user.setId(1);
+        user.setUname("111111111");
+        User user1 = new User();
+        user1.setId(2);
+        user.setUname("222222222");
+        userMapper.updateById(user);
+        int a =  1/0;
+
+        userMapper.updateById(user1);
+        /*stringRedisTemplate.opsForValue().set("15236984568","824367",5, TimeUnit.MINUTES);
+        rabbitTemplate.convertAndSend("gts","15269895632");*/
         return new ResponseResult(true, 200, "查询成功", userMapper.selectList(null));
     }
 

@@ -3,6 +3,7 @@ package com.sc.dep.api;
 import com.sc.common.response.ResponseResult;
 import com.sc.dep.pojo.Dep;
 import com.sc.dep.service.DepService;
+import com.sc.dep.service.MenuService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -25,6 +26,9 @@ public class DepController {
     @Autowired
     private DepService depService;
 
+    @Autowired
+    private MenuService menuService;
+
     @Value("${guan}")
     private String testString;
 
@@ -33,6 +37,12 @@ public class DepController {
     @RequestMapping(value = "deps",method = RequestMethod.GET)
     public ResponseResult getAllDeps(){
         return depService.getAllDeps();
+    }
+
+    @ApiOperation(value = "查询所有菜单", httpMethod = "GET")
+    @RequestMapping(value = "menus",method = RequestMethod.GET)
+    public ResponseResult getAllMenus(){
+        return menuService.getAllMenus(0);
     }
 
     @ApiOperation(value = "分页查询所有部门", httpMethod = "GET")
