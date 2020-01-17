@@ -17,6 +17,7 @@
         <module>G_config</module>
         <module>G_search</module>
         <module>G_websocket</module>
+        <module>G_security</module>
     </modules>
 
     <!--spring boot 父依赖 -->
